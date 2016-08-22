@@ -1,0 +1,116 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default custom-desc">
+                <div class="panel-body text-center">
+                    <p>An <strong>extremely</strong> useful tool that compares two characters and lets you know who has wasted more time in Hellfire Citadel.
+                        <br> The character with the highest score should consider leaving their house more often.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <form action="" role="form" ng-submit='search.getData()'>
+        <div class="row">
+            <!-- Input for character one UI -->
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center char-panel">Character One</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="" placeholder="Enter your name" ng-model='search.charIdOne'>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="" placeholder="Enter your realm" ng-model='search.realmOne'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- moosey image -->
+            <div class="col-md-4 col-sm-4">
+                <div id="mooseBackground">
+                    <img id="moose" src="http://i.imgur.com/iEIkgnG.png">
+                </div>
+            </div>
+            <!-- Input for character two UI -->
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center char-panel">Character Two</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="" placeholder="Enter your friend's name" ng-model='search.charIdTwo'>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="" placeholder="Enter your friend's realm" ng-model='search.realmTwo'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <button id="charSubmit" ng-click="showScore = !showScore" type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </div>
+    </form>
+    <hr>
+</div>
+<div class="container" ng-show="showScore">
+    <div class="row">
+        <!-- Column output for WOW Charater one -->
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center char-panel">{{search.data.charOne.name}} | {{search.data.charOne.realm}}</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><img class="charPortrait" src="http://render-api-us.worldofwarcraft.com/static-render/us/{{search.data.charOne.thumbnail}}">
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="score" class="text-right">{{search.charOneResults | number : 0}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a class="btn btn-primary center-block" ui-sref="detail({ characId : search.data.charOne.name, realmId : search.data.charOne.realm })">Go to Character Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center char-panel">{{search.data.charTwo.name}} | {{search.data.charTwo.realm}}</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="score" class="text-left">{{search.charTwoResults | number : 0}}</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p id="theImage2" class="text-right"><img class="charPortrait" src="http://render-api-us.worldofwarcraft.com/static-render/us/{{search.data.charTwo.thumbnail}}">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a class="btn btn-primary center-block" ui-sref="detail({ characId : search.data.charTwo.name, realmId : search.data.charTwo.realm })">Go to Character Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="panel panel-default custom-note">
+                <div class="panel-body text-center">
+                    <p>Note: Our super secret algorithm awards more points for defeating higher difficulty bosses.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
