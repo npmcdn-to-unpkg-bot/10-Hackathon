@@ -167,6 +167,10 @@ h1 {
 	margin-top: 20px;
 }
 
+.winnerMessage {
+	font-size: 15px;
+}
+
 /* very oddly specific image sizes/placements */
 
 #hfa {

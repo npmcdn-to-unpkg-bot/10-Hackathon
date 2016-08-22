@@ -50,13 +50,13 @@
         </div>
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
-                <button id="charSubmit" ng-click="showScore = !showScore" type="submit" class="btn btn-primary btn-block">Submit</button>
+                <button id="charSubmit" type="submit" class="btn btn-primary btn-block">Submit</button>
             </div>
         </div>
     </form>
     <hr>
 </div>
-<div class="container" ng-show="showScore">
+<div class="container" ng-if='search.charOneResults > 0'>
     <div class="row">
         <!-- Column output for WOW Charater one -->
         <div class="col-sm-4">
@@ -80,37 +80,51 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-4">
             <div class="panel panel-default">
-                <div class="panel-heading text-center char-panel">{{search.data.charTwo.name}} | {{search.data.charTwo.realm}}</div>
                 <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p class="score" class="text-left">{{search.charTwoResults | number : 0}}</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p id="theImage2" class="text-right"><img class="charPortrait" src="http://render-api-us.worldofwarcraft.com/static-render/us/{{search.data.charTwo.thumbnail}}">
-                            </p>
-                        </div>
+                    <div ng-if='search.charOneResults > search.charTwoResults'>
+                        <p class='winnerMessage text-center' id='winnerOneFirst'>{{search.data.charOne.name}} > {{search.data.charTwo.name}}!</p>
+                        <p class='winnerMessage text-center' id='winnerOneSecond'>{{search.data.charOne.name}} plays way too much!</p>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <a class="btn btn-primary center-block" ui-sref="detail({ characId : search.data.charTwo.name, realmId : search.data.charTwo.realm })">Go to Character Details</a>
+                    <div ng-if='search.charOneResults < search.charTwoResults'>
+                        <p class='winnerMessage text-center' id='winnerTwoFirst'>{{search.data.charOne.name}} < {{search.data.charTwo.name}}!</p>
+                        <p class='winnerMessage text-center' id='winnerTwoSecond'>{{search.data.charTwo.name}} plays way too much!</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center char-panel">{{search.data.charTwo.name}} | {{search.data.charTwo.realm}}</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p class="score" class="text-left">{{search.charTwoResults | number : 0}}</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p id="theImage2" class="text-right"><img class="charPortrait" src="http://render-api-us.worldofwarcraft.com/static-render/us/{{search.data.charTwo.thumbnail}}">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <a class="btn btn-primary center-block" ui-sref="detail({ characId : search.data.charTwo.name, realmId : search.data.charTwo.realm })">Go to Character Details</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-            <div class="panel panel-default custom-note">
-                <div class="panel-body text-center">
-                    <p>Note: Our super secret algorithm awards more points for defeating higher difficulty bosses.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="panel panel-default custom-note">
+                    <div class="panel-body text-center">
+                        <p>Note: Our super secret algorithm awards more points for defeating higher difficulty bosses.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
