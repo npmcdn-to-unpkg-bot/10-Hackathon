@@ -1,132 +1,143 @@
 /* main */
 
 body {
-	background: #2e4045;
-	font-family: 'PT Sans Narrow', sans-serif;
+    background: #2e4045;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 h1 {
-	margin-top: 0;
-	height: 120px;
-	padding-left: 2%;
-	padding-top: 30px;
-	font-size: 45px;
-	font-weight: bold;
-	color: white;
-	text-shadow: 2px 2px rgba(0,0,0, .8);
-	background-image: url('http://i.imgur.com/sVZSYE5.png'), linear-gradient(to bottom right, #bac54b, #32B181);;
-	background-position: 98% 2%;
-	background-size: 105px 115px, cover;
-	background-repeat: no-repeat;
-	border-bottom: 1px solid black;
-	box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
+    margin-top: 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px rgba(0, 0, 0, .8);
+    background-image: linear-gradient(to bottom right, #bac54b, #32B181);
+    background-position: 98% 2%;
+    background-size: cover;
+    border-bottom: 1px solid black;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
 }
+
 
 /****** SEARCH PAGE ******/
 
-/* small notes on search page */ 
+
+/* small notes on search page */
 
 .custom-desc {
-	font-size: 15px;
-	color: white;
-	background-color: #ebae3a;
+    font-size: 15px;
+    color: white;
+    background-color: #ebae3a;
 }
 
 .custom-note {
-	font-size: 15px;
-	color: white;
-	background-color: #ba3e3e;
+    font-size: 15px;
+    color: white;
+    background-color: #ba3e3e;
 }
+
 
 /* character 1 and 2 headings */
 
 .panel-default > .char-panel {
-	background-color: #83cd3b;
-	color: white;
-	font-size: 20px;
-	border-bottom: 1px solid black;
-	box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
+    background-color: #83cd3b;
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
 }
+
 
 /* moose image */
 
 #moose {
-	width: 183px;
-	height: 175px;
-	margin-left: -7px;
+    width: 183px;
+    height: 175px;
+    margin-left: -7px;
 }
 
 #mooseBackground {
-	visibility: hidden;
-	margin: 0 auto;
-	background: radial-gradient(circle, #7e6846, #8b340e);
-	box-shadow: 7px 7px 10px rgba(0, 0, 0, .3), -7px 7px 10px rgba(0, 0, 0, .3);
-	height: 170px;
-	width: 170px;
-	border-radius: 100px;
+    display: none;
+    margin: 0 auto;
+    background: radial-gradient(circle, #7e6846, #8b340e);
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, .3), -7px 7px 10px rgba(0, 0, 0, .3);
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
 }
+
 
 /* score */
 
 .score {
-	font-size: 60px;
-	font-weight: bold;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+#charOneScore {
+    text-align: right;
 }
 
 .charPortrait {
-	border-radius: 10px;
+    border-radius: 10px;
 }
 
+
 /****** DETAILS PAGE ******/
+
 
 /* character name */
 
 .custom-panel {
-	border: 1px solid black;
-	font-size: 40px;
-	background: linear-gradient(to top left, #bac54b, #32B181);
-		color: white;
-	text-shadow: 2px 2px rgba(0,0,0, .8);
+    border: 1px solid black;
+    font-size: 40px;
+    background: linear-gradient(to top left, #bac54b, #32B181);
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, .8);
 }
+
 
 /* boss names */
 
 .bossName {
-	width: 100%;
-	font-size: 25px;
-	font-weight: bold;
-	background: #32B181;	
-	border-bottom: 1px solid black;
-	margin-top: -15px;
-	color: white;
-	text-shadow: 2px 2px rgba(0,0,0, .8);
-	border-top-left-radius: 13px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    background: #32B181;
+    border-bottom: 1px solid black;
+    margin-top: -15px;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, .8);
+    border-top-left-radius: 13px;
     border-top-right-radius: 13px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
 }
 
+
 /* boss pictures */
 
 .imageCircle {
-	background: radial-gradient(circle, #64c10b 20px, #32B181);
-	box-shadow: -7px 7px 20px rgba(0,0,0, .8);
-	height: 190px;
-	width: 190px;
-	border-radius: 100px;
+    display: none;
 }
+
 
 /* kills */
 
 .amountOfKills {
-	font-size: 15px;
-	padding-top: 40px;
+    font-size: 15px;
+    text-align: center;
+    margin-left: -85px;
+    padding-right: 20px;
 }
+
 
 /* all panels */
 
 .panel {
-	box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
-	border: 1px solid black;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
+    border: 1px solid black;
 }
 
 .panel-default,
@@ -141,17 +152,17 @@ h1 {
     border-top-right-radius: 13px;
 }
 
+
 /* all buttons */
 
 .btn {
-	background-color: #32B181;
-	font-size: 20px;
-	font-weight: bold;
-
-	color: white;
-	border: 1px solid black;
-	border-radius: 10px;
-	box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
+    background-color: #32B181;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
 }
 
 .btn:hover,
@@ -164,129 +175,270 @@ h1 {
 }
 
 #charSubmit {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .winnerMessage {
-	font-size: 15px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
-/* very oddly specific image sizes/placements */
 
-#hfa {
-	height: 185px;
-	width: 185px;
-	margin-left: -3px
-}
+/* images */
 
-#reaver {
-	height: 210px;
-	width: 210px;
-	margin-top: -5px;
-	margin-left: -7px;
-}
-
-#korm {
-	height: 205px;
-	width: 205px;
-	margin-left: -8px;
-}
-
-#council {
-	height: 190px;
-	width: 190px;
-}
-
-#kilrogg {
-	height: 200px;
-	width: 200px;
-	margin-top: -4px;
-	margin-left: -6px;
-}
-
-#gore {
-	height: 205px;
-	width: 205px;
-	margin-top: -7px;
-	margin-left: -10px;
-
-}
-
-#isk {
-	height: 200px;
-	width: 200px;
-	margin-left: -8px;
-}
-
-#soc {
-	height: 200px;
-	width: 200px;
-	margin-left: -3px;
-	margin-top: -6px;
-}
-
-#velhari {
-	height: 200px;
-	width: 200px;
-	margin-left: -2px;
-}
-
-#zak {
-	height: 200px;
-	width: 200px;
-	margin-left: -5px;
-	margin-top: -5px;
-}
-
-#xhul {
-	height: 210px;
-	width: 210px;
-	margin-left: -8px;
-	margin-top: -6px;
-}
-
-#manny {
-	height: 190px;
-	width: 190px;
-	margin-left: 2px;
-}
-
+#hfa,
+#reaver,
+#korm,
+#council,
+#kilrogg,
+#gore,
+#isk,
+#soc,
+#velhari,
+#zak,
+#xhul,
+#manny,
 #archi {
-	height: 205px;
-	width: 205px;
-	margin-left: -10px;
-	margin-top: -3px;
+    display: none;
+}
+
+@media screen and (min-width: 335px) {
+    h1 {
+        height: 120px;
+        text-align: left;
+        padding-left: 2%;
+        padding-top: 30px;
+        font-size: 45px;
+        background-image: url('http://i.imgur.com/sVZSYE5.png'), linear-gradient(to bottom right, #bac54b, #32B181);
+        background-position: 98% 2%;
+        background-size: 105px 115px, cover;
+        background-repeat: no-repeat;
+        border-bottom: 1px solid black;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .score {
+        font-size: 60px;
+        padding-top: 0px;
+    }
+}
+
+@media screen and (min-width: 415px) {
+    .imageCircle {
+        display: inherit;
+        background: radial-gradient(circle, #64c10b 20px, #32B181);
+        box-shadow: -7px 7px 20px rgba(0, 0, 0, .8);
+        height: 190px;
+        width: 190px;
+        margin-top: 8px;
+        border-radius: 100px;
+    }
+    .amountOfKills {
+        text-align: left;
+        font-size: 15px;
+        margin-left: 0px;
+        padding-top: 40px;
+    }
+    .detailPanel {
+        height: 265px;
+    }
+    #hfa {
+        display: inherit;
+        height: 185px;
+        width: 185px;
+        margin-left: -3px;
+    }
+    #reaver {
+        display: inherit;
+        height: 210px;
+        width: 210px;
+        margin-top: -5px;
+        margin-left: -7px;
+    }
+    #korm {
+        display: inherit;
+        height: 205px;
+        width: 205px;
+        margin-left: -8px;
+    }
+    #council {
+        display: inherit;
+        height: 190px;
+        width: 190px;
+    }
+    #kilrogg {
+        display: inherit;
+        height: 200px;
+        width: 200px;
+        margin-top: -4px;
+        margin-left: -6px;
+    }
+    #gore {
+        display: inherit;
+        height: 205px;
+        width: 205px;
+        margin-top: -7px;
+        margin-left: -10px;
+    }
+    #isk {
+        display: inherit;
+        height: 200px;
+        width: 200px;
+        margin-left: -8px;
+    }
+    #soc {
+        display: inherit;
+        height: 200px;
+        width: 200px;
+        margin-left: -3px;
+        margin-top: -6px;
+    }
+    #velhari {
+        display: inherit;
+        height: 200px;
+        width: 200px;
+        margin-left: -2px;
+    }
+    #zak {
+        display: inherit;
+        height: 200px;
+        width: 200px;
+        margin-left: -5px;
+        margin-top: -5px;
+    }
+    #xhul {
+        display: inherit;
+        height: 210px;
+        width: 210px;
+        margin-left: -8px;
+        margin-top: -6px;
+    }
+    #manny {
+        display: inherit;
+        height: 190px;
+        width: 190px;
+        margin-left: 2px;
+    }
+    #archi {
+        display: inherit;
+        height: 205px;
+        width: 205px;
+        margin-left: -10px;
+        margin-top: -3px;
+    }
 }
 
 @media screen and (min-width: 550px) {
+    h1 {
+        height: 190px;
+        font-size: 80px;
+        padding-top: 40px;
+        background-image: url('http://i.imgur.com/sVZSYE5.png'), linear-gradient(to bottom right, #bac54b, #32B181);
+        background-position: 98% 2%;
+        background-size: 165px 180px, cover;
+        background-repeat: no-repeat;
+    }
 
-	h1 {
-		height: 190px;
-		font-size: 80px;
-		padding-top: 40px;
-		background-image: url('http://i.imgur.com/sVZSYE5.png'), linear-gradient(to bottom right, #bac54b, #32B181);;
-		background-position: 98% 2%;
-		background-size: 165px 180px, cover;
-		background-repeat: no-repeat;
+
+.imageCircle {
+	margin-top: -60px;
+	float: left;
+}
+
+.amountOfKills {
+	margin-top: -30px;
+	margin-left: -50px;
+	text-align: center;
+}
+
+.detailPanel {
+	height: 240px;
+}
+
+    .bossName {
+        width: 50%;
+        padding: 7px;
+        font-size: 25px;
+        font-weight: bold;
+        background: #32B181;
+        margin-top: 10px;
+        margin-right: 20px;
+        float: right;
+        color: white;
+        border: 1px solid black;
+        text-shadow: 2px 2px rgba(0, 0, 0, .8);
+        border-radius: 10px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+	    .detailPanel {
+        height: 265px;
+    }
+
+    .bossName {
+    	padding: 0px;
+    	float: none;
+        width: 100%;
+        font-size: 25px;
+        font-weight: bold;
+        background: #32B181;
+        border-top: 0px;
+        border-right: 0px;
+        border-left: 0px;
+        border-bottom: 1px solid black;
+        margin-top: -15px;
+        margin-right: 0px;
+        color: white;
+        text-shadow: 2px 2px rgba(0, 0, 0, .8);
+        border-top-left-radius: 13px;
+        border-top-right-radius: 13px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, .3), -4px 4px 10px rgba(0, 0, 0, .3);
+    }
+
+    .imageCircle {
+	float: none;
+	margin-top: 8px;
+}
+
+	.amountOfKills {
+		margin-top: 6px;
+		text-align: left;
+		margin-left: 0px;
 	}
 
+    #moose {
+        width: 183px;
+        height: 175px;
+        margin-left: -7px;
+    }
+    #mooseBackground {
+        display: inherit;
+        margin: 0 auto;
+        background: radial-gradient(circle, #7e6846, #8b340e);
+        box-shadow: 7px 7px 10px rgba(0, 0, 0, .3), -7px 7px 10px rgba(0, 0, 0, .3);
+        height: 170px;
+        width: 170px;
+        border-radius: 100px;
+    }
+    .score {
+        padding-top: 10px;
+        font-size: 40px;
+    }
+    #scoreBox {
+        margin-top: 60px;
+    }
 }
 
-@media screen and (min-width: 770px) {
-
-#moose {
-	width: 183px;
-	height: 175px;
-	margin-left: -7px;
-}
-
-#mooseBackground {
-	visibility: visible;
-	margin: 0 auto;
-	background: radial-gradient(circle, #7e6846, #8b340e);
-	box-shadow: 7px 7px 10px rgba(0, 0, 0, .3), -7px 7px 10px rgba(0, 0, 0, .3);
-	height: 170px;
-	width: 170px;
-	border-radius: 100px;
-}
+@media screen and (min-width: 992px) {
+    .score {
+        padding-top: 0;
+        font-size: 60px;
+    }
 }

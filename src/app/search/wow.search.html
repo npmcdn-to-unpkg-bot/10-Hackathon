@@ -56,7 +56,7 @@
     </form>
     <hr>
 </div>
-<div class="container" ng-if='search.charOneResults > 0'>
+<div class="container" ng-if='search.charOneResults >= 0'>
     <div class="row">
         <!-- Column output for WOW Charater one -->
         <div class="col-sm-4">
@@ -64,12 +64,12 @@
                 <div class="panel-heading text-center char-panel">{{search.data.charOne.name}} | {{search.data.charOne.realm}}</div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-xs-6">
                             <p><img class="charPortrait" src="http://render-api-us.worldofwarcraft.com/static-render/us/{{search.data.charOne.thumbnail}}">
                             </p>
                         </div>
-                        <div class="col-sm-6">
-                            <p class="score" class="text-right">{{search.charOneResults | number : 0}}</p>
+                        <div class="col-xs-6">
+                            <p class="score" id="charOneScore">{{search.charOneResults | number : 0}}</p>
                         </div>
                     </div>
                     <div class="row">
@@ -80,7 +80,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div id="scoreBox" class="col-sm-4">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div ng-if='search.charOneResults > search.charTwoResults'>
@@ -99,10 +99,10 @@
                     <div class="panel-heading text-center char-panel">{{search.data.charTwo.name}} | {{search.data.charTwo.realm}}</div>
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-xs-6">
                                 <p class="score" class="text-left">{{search.charTwoResults | number : 0}}</p>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-xs-6">
                                 <p id="theImage2" class="text-right"><img class="charPortrait" src="http://render-api-us.worldofwarcraft.com/static-render/us/{{search.data.charTwo.thumbnail}}">
                                 </p>
                             </div>
@@ -119,7 +119,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
+            <div class="col-sm-12 col-lg-6 col-lg-offset-3">
                 <div class="panel panel-default custom-note">
                     <div class="panel-body text-center">
                         <p>Note: Our super secret algorithm awards more points for defeating higher difficulty bosses.</p>
